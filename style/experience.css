@@ -1,0 +1,83 @@
+#experience{
+    position: relative;
+}
+
+.experience-card-1, .experience-card-2{
+    display: flex;
+    height: auto;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+
+.experience-card-1{
+    border: 2px rgb(214, 153, 216) solid;
+}
+
+.experience-card-2{
+    border: 2px rgb(255, 255, 255) solid;
+}
+
+
+.slider-warpper{
+    margin: 0 70px 55px 55px;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.experience-container{
+    margin-top: 3rem;
+}
+.experience-card-image{
+    width: 50px;
+    height: 50px;
+    border: 10px white solid;
+    border-radius: 50%;
+}
+
+.slider-warpper .swiper-pagination-bullet{
+    background-color: rgb(214, 153, 216);
+    height: 15px;
+    width: 15px;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: rgb(214, 153, 216);
+}
+
+.card-cat{
+    color: rgb(214, 153, 216);
+    font-size: 40px;
+}
+
+article{
+    display: flex;
+    width: 10rem;
+    text-align: left;
+    gap: 0.5rem;
+}
+
+article .icon{
+    cursor: pointer;
+}
+article h3{
+    color: white;
+}
+
+
+/* Projects Section */
+
+.proj-desc{
+    color: white;
+    text-align: center;
+}
+
+.proj-card{
+    gap: 1rem;
+}

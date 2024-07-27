@@ -1,0 +1,39 @@
+/* About Section */
+.text-header{
+    justify-content: center;
+    color: white;
+    display: flex;
+    font-size: 4rem;
+}
+
+.about-text{
+    justify-content: center;
+    color: white;
+    display: flex;
+    font-size: 2rem;
+}
+
+.subsection {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.padges {
+    border: 1px white solid;
+    border-radius: 20px;
+    justify-content: space-between;
+    text-align: center;
+    width: 30vw;
+    padding: 1rem;
+}
+
+.desc{
+    color: white;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin-bottom: auto;
+    text-align: center;
+    text-justify: auto;
+}

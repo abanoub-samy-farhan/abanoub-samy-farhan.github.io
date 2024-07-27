@@ -1,0 +1,262 @@
+/* General Stylying */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: rgb(214, 153, 216);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+/* TRANSTIONS */
+a, .btn {
+    transition: all 300ms, ease;
+}
+
+nav, .nav-links {
+    display: flex;
+}
+
+nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+}
+
+.nav-links {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover  {
+    color: rgb(166, 166, 166);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+    transition: color 300ms ease;
+}
+
+.logo {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+/* Mobile Menu view */
+#mobile-view{
+    display: none;
+}
+
+.mobile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.mobile-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.mobile-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links {
+    right: 0;
+    top:100%;
+    position: absolute;
+    background-color: black;
+    width: fit-content;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+}
+
+.menu-links.open {
+    max-height: 300px;
+}
+
+.mobile-icon.open span:first-child {
+    transform: rotate(45deg) translate(10px, 5px);
+}
+
+.mobile-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-icon.open span:last-child {
+    transform: rotate(-45deg) translate(10px, -6px);
+}
+
+
+.mobile-icon span:first-child {
+    transform: none;
+}
+
+.mobile-icon span:first-child {
+    opacity: 1;
+}
+
+.mobile-icon span:first-child {
+    transform: none;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile section */
+
+#profile {
+    justify-content: center;
+    display: flex;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section-pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    gap: 5rem;
+    margin: auto 0;
+}
+
+.text-profile {
+    align-self: center;
+    text-align: center;
+}
+
+.section_text_1{
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.section_text_2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.name_prof{
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+.icon {
+    height: 2rem;
+    cursor: pointer;
+}
+
+.icon-large{
+    height: 4rem;
+    cursor: pointer;
+}
+
+/* BUTTONS */
+
+.buttons_container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn{
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 2rem;
+}
+
+.btn-color-1, .btn-color-2{
+    border: rgb(255, 255, 255) 0.1rem solid;
+    color: white;
+    background-color: black;
+}
+
+.btn-color-2:hover, .btn-color-1:hover{
+    transform: scale(1.1);
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3ms ease-in-out;
+}
+
+#projects .btn{
+    border-radius: 4rem;
+}
