@@ -1,4 +1,4 @@
-import {Swiper} from './node_modules/swiper/swiper-bundle.mjs';
+import {Swiper} from './swiper/swiper-bundle.mjs';
 
 const swiper = new Swiper('.slider-warpper', {
     slidesPerView: 1,
