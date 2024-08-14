@@ -11,239 +11,246 @@
     <link rel="stylesheet" href="style/media.css">
     <link rel="stylesheet" href="style/about.css">
     <link rel="stylesheet" href="style/experience.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">Abanoub Aziz
-        </div>
-        <div>
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <nav id="mobile-view">
-        <div class="logo">Abanoub Aziz
-        </div>
-        <div class="mobile-menu">
-            <div class="mobile-icon" onclick="ToggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+<body class="no-scroll">
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="container-bg">
+        <nav id="desktop-nav">
+            <div class="logo">Abanoub Aziz
             </div>
-        <div class="menu-links">
-              <li><a href="#about" onclick="ToggleMenu()">About</a></li>
-              <li><a href="#experience" onclick="ToggleMenu()">Experience</a></li>
-              <li><a href="#projects" onclick="ToggleMenu()">Projects</a></li>
-              <li><a href="#blog" onclick="ToggleMenu()">Blog</a></li>
-              <li><a href="#contact" onclick="ToggleMenu()">Contact</a></li>
-          </div>
-      </nav>
-      <section id="profile">
-        <div class="section-pic-container">
-            <img src="assets/personal photo.png" alt="Abanoub Aziz Photo">
-        </div>
-        <div class="text-profile">
-            <p class="section_text_1">Hello there, I'm</p>
-            <h1 class="name_prof"> Abanoub Aziz</h1>
-            <p class="section_text_2">Software Engineer and Machine learning enthusiate</p>
-            <div class="buttons_container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Abanoub_Aziz.pdf')">Download CV</button>
-                <button class="btn btn-color-1" onclick="location.href = ('./#contact')">Contact Me</button>
+            <div>
+              <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
             </div>
-            <div class="social-media-icons">
-                <img src="/assets/linkedin copy.png" alt="Abanoub Aziz linkedin" onclick="location.href = ('https://www.linkedin.com/in/abanoubfarhan/')" class="icon">  
-                <img src="/assets/github copy.png" alt="Abanoub Aziz github" onclick="location.href = ('https://github.com/abanoub-samy-farhan')" class="icon">
+          </nav>
+          <nav id="mobile-view">
+            <div class="logo">Abanoub Aziz
             </div>
-        </div>
-      </section>
-      <section id="about">
-        <p>Get To Know More</p>
-        <h1 class="text-header">About Me</h1>
-        <div class="section-container">
-            <div class="subsection">
-                <div class="padges">
-                    <img src="assets/experience copy.png" alt="Abanoub Aziz Experience", class="icon">
-                    <h3 class="about-text">Experience</h3>
-                    <p>+1 years<br/> Backend Development</p>
+            <div class="mobile-menu">
+                <div class="mobile-icon" onclick="ToggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="padges">
-                    <img src="assets/education copy.png" alt="Abanoub Aziz education", class="icon">
-                    <h3 class="about-text">Education</h3>
-                    <p>Egypt Japan University for Science and Technology<br/> GPA: 3.82</p>
+            <div class="menu-links">
+                  <li><a href="#about" onclick="ToggleMenu()">About</a></li>
+                  <li><a href="#experience" onclick="ToggleMenu()">Experience</a></li>
+                  <li><a href="#projects" onclick="ToggleMenu()">Projects</a></li>
+                  <li><a href="#blog" onclick="ToggleMenu()">Blog</a></li>
+                  <li><a href="#contact" onclick="ToggleMenu()">Contact</a></li>
+              </div>
+          </nav>
+          <section id="profile">
+            <div class="section-pic-container">
+                <img src="assets/personal photo.png" alt="Abanoub Aziz Photo">
+            </div>
+            <div class="text-profile">
+                <p class="section_text_1">Hello there, I'm</p>
+                <h1 class="name_prof"> Abanoub Aziz</h1>
+                <p class="section_text_2">Software Engineer and Machine learning enthusiate</p>
+                <div class="buttons_container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/Abanoub_Aziz.pdf')">Download CV</button>
+                    <button class="btn btn-color-1" onclick="location.href = ('./#contact')">Contact Me</button>
+                </div>
+                <div class="social-media-icons">
+                    <img src="/assets/linkedin copy.png" alt="Abanoub Aziz linkedin" onclick="location.href = ('https://www.linkedin.com/in/abanoubfarhan/')" class="icon">  
+                    <img src="/assets/github copy.png" alt="Abanoub Aziz github" onclick="location.href = ('https://github.com/abanoub-samy-farhan')" class="icon">
                 </div>
             </div>
-            <div class="subsection">
-                <p class="desc">I'm Abanoub Samy, a passionate and driven Computer Engineering student at the Egypt Japan University of Science and Technology. Currently, I'm enhancing my skills as a Software Engineering trainee at ALX Africa, where I'm diving deep into various programming languages and frameworks, including Python, C/C++, JavaScript, and Node.js.<br/><br/>
-
-                    I'm particularly interested in web development and machine learning. On GitHub, I've worked on projects like an AirBnB clone and a simple UNIX-like shell, showcasing my ability to handle both backend development and database management.<br/><br/>
-                    
-                    In addition to my technical pursuits, I have a strong passion for teaching and sharing knowledge. I've mentored students through complex coding concepts, making them accessible and enjoyable. My experience as a chemistry tutor was enlightening, and I aim to expand this experience in my career as a computer science engineer.<br/><br/>
-                    
-                    Outside of academics and work, I'm actively engaged in competitive programming. Recently, my team and I participated in the ACPC competition, where we placed 30th out of 500 teams, which honed my problem-solving skills and reinforced my commitment to continuous learning.
-                </p>
-            </div>
-        </div>
-      </section>
-      <section id="experience">
-        <p>Explore more about</p>
-        <h1 class="text-header">My Experience</h1>
-        <div class="experience-container swiper">
-            <div class="slider-warpper scrollable-container">
-                <div class="experience-card-list swiper-wrapper">
-                    <div class="experience-card-2 swiper-slide">
-                        <h2 class="card-cat">Frontend Development</h2>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>CSS</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>TypeScript</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
+          </section>
+          <section id="about">
+            <p>Get To Know More</p>
+            <h1 class="text-header">About Me</h1>
+            <div class="section-container">
+                <div class="subsection">
+                    <div class="padges">
+                        <img src="assets/experience copy.png" alt="Abanoub Aziz Experience", class="icon">
+                        <h3 class="about-text">Experience</h3>
+                        <p>+1 years<br/> Backend Development</p>
                     </div>
-                    <div class="experience-card-1 swiper-slide">
-                        <h2 class="card-cat">Backend Development</h2>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>PostgerSQL</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>MySQL</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>Node JS</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>TypeScript</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>Git</h3>
-                                <p>Experienced</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="experience-card-2 swiper-slide">
-                        <h2 class="card-cat">Data Science and Mahcine Learning</h2>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>Pandas</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>Scikit Learn</h3>
-                                <p>Beginner</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>Matplotlib</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="assets/checkmark.png" alt="checkmark" class="icon">
-                            <div>
-                                <h3>NumPy</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article>
+                    <div class="padges">
+                        <img src="assets/education copy.png" alt="Abanoub Aziz education", class="icon">
+                        <h3 class="about-text">Education</h3>
+                        <p>Egypt Japan University for Science and Technology<br/> GPA: 3.82</p>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-      </section>
-      <section id="projects">
-        <p>Browser My Recent</p>
-        <h1 class="text-header">Projects</h1>
-        <div class="experience-container swiper">
-            <div class="slider-warpper scrollable-container">
-                <div class="experience-card-list swiper-wrapper">
-                    <div class="experience-card-2 proj-card swiper-slide">
-                        <h2 class="card-cat">AirBnB Clone</h2>
-                        <p class="proj-desc">The project includes developing both the front-end and back-end components. <br/>Key features include user authentication, property listings, booking functionality, and user reviews.<br/> The project emphasizes using technologies such as HTML, CSS, JavaScript, Python, Flask, and SQLAlchemy.</p>
-                        <div class="buttons_container">
-                            <button class="btn btn-color-1" onclick="window.location.href=('https://github.com/abanoub-samy-farhan/AirBnB_clone_v2')">GitHub</button>
-                        </div>
-                    </div>
-                    <div class="experience-card-1 proj-card swiper-slide">
-                        <h2 class="card-cat">Simple Shell</h2>
-                        <p class="proj-desc">The Simple Shell project is a basic implementation of a Unix shell, designed to familiarize users with the core concepts of shell programming and process management. This shell enables users to execute commands, handle basic input and output redirection, and manage process execution.</p>
-                        <div class="buttons_container">
-                            <button class="btn btn-color-1" onclick="window.location.href=('https://github.com/abanoub-samy-farhan/AirBnB_clone_v2')">GitHub</button>
-                        </div>
-                    </div>
-                    <div class="experience-card-2 proj-card swiper-slide">
-                        <h2 class="card-cat">Personal Website</h2>
-                        <p class="proj-desc">My personal website serves as a central hub for showcasing my skills, projects, and professional journey. It features a clean and modern design, tailored to reflect my personal brand. </p>
-                        <div class="buttons_container">
-                            <button class="btn btn-color-1" onclick="window.location.href=('https://github.com/abanoub-samy-farhan/AirBnB_clone_v2')">GitHub</button>
-                        </div>
-                    </div>
-                    <div class="experience-card-1 proj-card swiper-slide">
-                        <h2 class="card-cat">Netflix Prediction Model</h2>
-                        <p class="proj-desc">Comming Soon</p>
-                        <div class="buttons_container">
-                            <button class="btn btn-color-1" onclick="window.location.href=('https://github.com/abanoub-samy-farhan/AirBnB_clone_v2')">GitHub</button>
-                        </div>
-                    </div>
+                <div class="subsection">
+                    <p class="desc">I'm Abanoub Samy, a passionate and driven Computer Engineering student at the Egypt Japan University of Science and Technology. Currently, I'm enhancing my skills as a Software Engineering trainee at ALX Africa, where I'm diving deep into various programming languages and frameworks, including Python, C/C++, JavaScript, and Node.js.<br/><br/>
+    
+                        I'm particularly interested in web development and machine learning. On GitHub, I've worked on projects like an AirBnB clone and a simple UNIX-like shell, showcasing my ability to handle both backend development and database management.<br/><br/>
+                        
+                        In addition to my technical pursuits, I have a strong passion for teaching and sharing knowledge. I've mentored students through complex coding concepts, making them accessible and enjoyable. My experience as a chemistry tutor was enlightening, and I aim to expand this experience in my career as a computer science engineer.<br/><br/>
+                        
+                        Outside of academics and work, I'm actively engaged in competitive programming. Recently, my team and I participated in the ACPC competition, where we placed 30th out of 500 teams, which honed my problem-solving skills and reinforced my commitment to continuous learning.
+                    </p>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
-        </div>
-      </section>
+          </section>
+          <section id="experience">
+            <p>Explore more about</p>
+            <h1 class="text-header">My Experience</h1>
+            <div class="experience-container swiper">
+                <div class="slider-warpper scrollable-container">
+                    <div class="experience-card-list swiper-wrapper">
+                        <div class="experience-card-2 swiper-slide">
+                            <h2 class="card-cat">Frontend Development</h2>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>HTML</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>CSS</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>JavaScript</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>TypeScript</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="experience-card-1 swiper-slide">
+                            <h2 class="card-cat">Backend Development</h2>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>PostgerSQL</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>MySQL</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>Node JS</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>TypeScript</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>Git</h3>
+                                    <p>Experienced</p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="experience-card-2 swiper-slide">
+                            <h2 class="card-cat">Data Science and Mahcine Learning</h2>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>Pandas</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>Scikit Learn</h3>
+                                    <p>Beginner</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>Matplotlib</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="assets/checkmark.png" alt="checkmark" class="icon">
+                                <div>
+                                    <h3>NumPy</h3>
+                                    <p>Intermediate</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+          </section>
+          <section id="projects">
+            <p>Browser My Recent</p>
+            <h1 class="text-header">Projects</h1>
+            <div class="experience-container swiper">
+                <div class="slider-warpper scrollable-container">
+                    <div class="experience-card-list swiper-wrapper">
+                        <div class="experience-card-2 proj-card swiper-slide">
+                            <h2 class="card-cat">AirBnB Clone</h2>
+                            <p class="proj-desc">The project includes developing both the front-end and back-end components. <br/>Key features include user authentication, property listings, booking functionality, and user reviews.<br/> The project emphasizes using technologies such as HTML, CSS, JavaScript, Python, Flask, and SQLAlchemy.</p>
+                            <div class="buttons_container">
+                                <button class="btn btn-color-1" onclick="window.location.href=('https://github.com/abanoub-samy-farhan/AirBnB_clone_v2')">GitHub</button>
+                            </div>
+                        </div>
+                        <div class="experience-card-1 proj-card swiper-slide">
+                            <h2 class="card-cat">Simple Shell</h2>
+                            <p class="proj-desc">The Simple Shell project is a basic implementation of a Unix shell, designed to familiarize users with the core concepts of shell programming and process management. This shell enables users to execute commands, handle basic input and output redirection, and manage process execution.</p>
+                            <div class="buttons_container">
+                                <button class="btn btn-color-1" onclick="window.location.href=('https://github.com/abanoub-samy-farhan/simple_shell')">GitHub</button>
+                            </div>
+                        </div>
+                        <div class="experience-card-2 proj-card swiper-slide">
+                            <h2 class="card-cat">Personal Website</h2>
+                            <p class="proj-desc">My personal website serves as a central hub for showcasing my skills, projects, and professional journey. It features a clean and modern design, tailored to reflect my personal brand. </p>
+                            <div class="buttons_container">
+                                <button class="btn btn-color-1" onclick="window.location.href=('https://github.com/abanoub-samy-farhan/abanoub-samy-farhan.github.io')">GitHub</button>
+                            </div>
+                        </div>
+                        <div class="experience-card-1 proj-card swiper-slide">
+                            <h2 class="card-cat">Netflix Prediction Model</h2>
+                            <p class="proj-desc">Comming Soon</p>
+                            <div class="buttons_container">
+                                <button class="btn btn-color-1" onclick="window.location.href=('https://github.com/abanoub-samy-farhan/')">GitHub</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+          </section>
+    </div>
     <script type="module" src="scripts.js"></script>
+    <script src="scripts/loader.js"></script>
     <script src="utils.js"></script>
 </body>
 </html>
