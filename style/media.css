@@ -42,12 +42,27 @@
     .about-containers {
       margin-top: 0;
     }
+
+    .blog-card h3{
+      font-size: 1rem;
+    }
+    .blog-card time{
+      font-size: 15px;
+    }
+    .blog-card button{
+      font-size: 0.8rem;
+      height: fit-content;
+    }
   }
   
   @media screen and (max-width: 600px) {
     #contact,
     #about .about-text{
         font-size: 1rem;
+    }
+
+    #contact h1{
+        font-size: 1-rem;
     }
     footer {
       height: 40vh;
@@ -101,5 +116,34 @@
     }
     .desc {
       text-align: justify;
+    }
+
+    .blog-card h3{
+      font-size: 0.8rem;
+    }
+    .blog-card time{
+      font-size: 10px;
+    }
+    .blog-card button{
+      font-size: 0.5rem;
+      padding: 10px;
+      height: fit-content;
+    }
+    .blog-card .sm svg{
+      width: 10px;
+      height: 10px;
+    }
+
+    .sm:hover{
+      gap: 3px;
+    }
+
+    #contact .text-header, #projects .text-header, #about .text-header, #experience .text-header, #blog .text-header{
+      font-size: 2.5rem;
+    }
+
+    #contact .contact-container img{
+      width: 30px;
+      height: 30px;
     }
   }

@@ -1,0 +1,25 @@
+#contact{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container{
+    background-color: rgb(39, 39, 39);
+    border-radius: 50px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: fit-content;
+    padding: 10px 30px;
+}
+
+.contact-container img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
