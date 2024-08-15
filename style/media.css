@@ -121,16 +121,16 @@
     .blog-card time{
       font-size: 10px;
     }
-    .blog-card button{
+    #blog .blog-card button{
       font-size: 0.5rem;
       padding: 10px;
+      width: 200px;
       height: fit-content;
     }
-    .blog-card .sm svg{
+    #blog svg{
       width: 10px;
       height: 10px;
     }
-
     .sm:hover{
       gap: 3px;
     }
@@ -147,8 +147,13 @@
     footer{
       font-size: 0.8rem;
     }
+    
     p{
       font-size: 0.8rem;
     }
     
+    .btn-text{
+      font-size: 0.4rem;
+    }
+  
   }
