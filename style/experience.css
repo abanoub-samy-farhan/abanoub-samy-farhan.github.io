@@ -9,10 +9,13 @@
     border-radius: 2rem;
     box-sizing: border-box;
     text-align: center;
-    flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.warp{
+    flex-wrap: wrap;
 }
 
 #projects .experience-card-1, #projects .experience-card-2{

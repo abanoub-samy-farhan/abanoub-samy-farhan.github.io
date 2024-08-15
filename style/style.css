@@ -258,7 +258,7 @@ section {
 }
 
 .btn-color-2:hover, .btn-color-1:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     color: black;
     background-color: white;
     cursor: pointer;
@@ -296,10 +296,31 @@ section {
     animation: spin 0.5s infinite linear;
 }
 
+.loader-small{
+    height: 10px;
+    width: 10px;
+    border: 2px solid rgb(50, 50, 50);
+    border-top-color: rgb(214, 153, 216);
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+
 @keyframes spin {
     100%{
         transform: rotate(360deg);
     }
+}
+
+
+/* FOOTER */
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    background-color: rgb(27, 27, 27);
+    padding: 20px 10px;
 }
 
 /* side scroll bar*/

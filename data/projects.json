@@ -1,0 +1,22 @@
+[
+    {
+        "title": "AirBnB Clone",
+        "description": "The project includes developing both the front-end and back-end components. <br/>Key features include user authentication, property listings, booking functionality, and user reviews.<br/> The project emphasizes using technologies such as HTML, CSS, JavaScript, Python, Flask, and SQLAlchemy.",
+        "url": "https://github.com/abanoub-samy-farhan/AirBnB_clone_v2"
+    },
+    {
+        "title": "Simple Shell",
+        "description": "The project involves developing a simple UNIX command interpreter. <br/>The shell is capable of executing commands in the PATH, handling arguments, and executing built-in commands. <br/>The project emphasizes using technologies such as C, system calls, and the UNIX environment.",
+        "url": "https://github.com/abanoub-samy-farhan/simple_shell"
+    },
+    {
+        "title": "Personal Website",
+        "description": "My personal website serves as a central hub for showcasing my skills, projects, and professional journey. It features a clean and modern design, tailored to reflect my personal brand.",
+        "url": "https://github.com/abanoub-samy-farhan/abanoub-samy-farhan.github.io"
+    },
+    {
+        "title": "AI Chatbot",
+        "description": "The project involves developing an AI chatbot capable of answering user queries. <br/>The chatbot is trained on a dataset of questions and answers using machine learning techniques. <br/>The project emphasizes using technologies such as React, Nextjs, OpenAI API",
+        "url": "https://github.com/abanoub-samy-farhan/AI-ChatBot"
+    }
+]

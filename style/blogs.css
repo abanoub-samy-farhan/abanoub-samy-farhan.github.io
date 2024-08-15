@@ -1,6 +1,7 @@
 #blog{
     justify-content: center;
     align-items: center;
+    height: fit-content;
 }
 
 .space-under{
@@ -8,12 +9,13 @@
 }
 .blog-container{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: fit-content;
     gap: 2px;
     height: fit-content;
+    width: 100%;
 }
 
 .blog-card{
@@ -23,6 +25,7 @@
     justify-content: space-between;
     overflow: hidden;
     text-overflow: ellipsis;
+    background-color: rgb(30, 30, 30);
     gap: 20px;
     padding: 20px;
     color: rgb(219, 219, 219);
@@ -32,7 +35,6 @@
 
 
 .blog-card h3{
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
@@ -52,7 +54,7 @@
 }
 
 .blog-card:hover{
-    background-color: rgb(31, 31, 31);
+    background-color: rgb(41, 41, 41);
 }
 
 .hyper{
@@ -64,6 +66,7 @@
 
 .sm{
     font-size: 0.8rem;
+    border: none;
 }
 
 .sm:hover{
@@ -72,4 +75,13 @@
 
 .blog-card .sm svg{
     width: 20px;
+}
+
+.waiting-list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }

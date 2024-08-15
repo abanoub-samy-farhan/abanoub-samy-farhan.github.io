@@ -64,9 +64,6 @@
     #contact h1{
         font-size: 1-rem;
     }
-    footer {
-      height: 40vh;
-    }
     #profile {
       height: 83vh;
       display: block;
@@ -146,4 +143,12 @@
       width: 30px;
       height: 30px;
     }
+
+    footer{
+      font-size: 0.8rem;
+    }
+    p{
+      font-size: 0.8rem;
+    }
+    
   }
