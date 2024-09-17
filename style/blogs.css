@@ -18,6 +18,16 @@
     width: 100%;
 }
 
+.blog-info-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    gap: 80px;
+    width: 100%;
+}
+
 .blog-card{
     width: 80vw;
     display: flex;

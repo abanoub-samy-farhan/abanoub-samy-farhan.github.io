@@ -121,10 +121,13 @@
     .blog-card time{
       font-size: 10px;
     }
+    .blog-card .blog-info-box{
+      gap: 20px;
+    }
     #blog .blog-card button{
       font-size: 0.5rem;
       padding: 10px;
-      width: 200px;
+      width: 100px;
       height: fit-content;
     }
     #blog svg{
