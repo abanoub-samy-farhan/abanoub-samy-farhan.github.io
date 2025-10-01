@@ -75,20 +75,20 @@ export const siteConfig = {
   footer: {
     navLinks: [
       {
-        text: 'Posts Props',
-        href: '/posts-props',
+        text: 'Home',
+        href: '/',
       },
       {
-        text: 'Markdown Style',
-        href: '/md-style',
+        text: 'Blog',
+        href: '/blog',
       },
       {
-        text: 'View on Astro',
-        href: 'https://astro.build/themes/details/vitesse-theme-for-astro/',
+        text: 'Projects',
+        href: '/projects',
       },
       {
-        text: 'GitHub Repository',
-        href: 'https://github.com/kieranwv/astro-theme-vitesse',
+        text: 'GitHub',
+        href: 'https://github.com/abanoub-samy-farhan',
       },
     ],
   },
