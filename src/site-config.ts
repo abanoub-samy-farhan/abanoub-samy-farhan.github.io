@@ -1,45 +1,40 @@
 export const siteConfig = {
-  author: 'Kieran Wang',
-  title: 'Vitesse theme for Astro',
-  subtitle: 'Vitesse theme for Astro, supports Vue and UnoCSS.',
-  description: 'A Minimal, SEO-friendly portfolio and blog theme for Astro.',
+  author: 'Abanoub Aziz',
+  title: 'Abanoub Aziz',
+  description: 'Personal website and blog of Abanoub Aziz',
   image: {
     src: '/hero.jpg',
     alt: 'Website Main Image',
   },
-  email: 'kieranwme@gmail.com',
+  email: 'abanoubsamy2341@gmail.com',
   socialLinks: [
     {
       text: 'GitHub',
-      href: 'https://github.com/kieranwv/astro-theme-vitesse',
+      href: 'https://github.com/abanoub-samy-farhan',
       icon: 'i-simple-icons-github',
       header: 'i-ri-github-line',
     },
     {
-      text: 'Twitter',
-      href: '',
+      text: 'X',
+      href: 'https://x.com/AbanoubAziz23',
       icon: 'i-simple-icons-x',
       header: 'i-ri-twitter-x-line',
     },
     {
       text: 'Linkedin',
-      href: '',
+      href: 'https://www.linkedin.com/in/abanoubfarhan/',
       icon: 'i-simple-icons-linkedin',
     },
     {
-      text: 'Instagram',
-      href: '',
-      icon: 'i-simple-icons-instagram',
-    },
-    {
       text: 'Youtube',
-      href: '',
+      href: 'https://www.youtube.com/@AbanoubSAziz',
       icon: 'i-simple-icons-youtube',
     },
   ],
   header: {
     logo: {
-      src: '/favicon.svg',
+      src_dark: '/logo.me.png',
+      src_light: '/logo.me.light.png',
       alt: 'Logo Image',
     },
     navLinks: [

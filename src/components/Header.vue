@@ -1,26 +1,11 @@
 <script lang="ts" setup>
+import { useWindowScroll } from '@vueuse/core'
+import { onMounted, ref, unref } from 'vue'
 import siteConfig from '@/site-config'
 import { getLinkTarget } from '@/utils/link'
-import { useWindowScroll } from '@vueuse/core'
-import { computed, onMounted, ref, unref } from 'vue'
 import ThemeToggle from './ThemeToggle.vue'
 
 const navLinks = siteConfig.header.navLinks || []
-
-const socialLinks = computed(() => {
-  return siteConfig.socialLinks.filter((link: Record<string, any>) => {
-    if (link.header && typeof link.header === 'boolean') {
-      return link
-    }
-    else if (link.header && typeof link.header === 'string') {
-      link.icon = link.header.includes('i-') ? link.header : link.icon
-      return link
-    }
-    else {
-      return false
-    }
-  })
-})
 
 const { y: scroll } = useWindowScroll()
 
@@ -78,11 +63,12 @@ function toggleNavDrawer() {
   <header
     id="header" :class="{ 'header-bg-blur': scroll > 20 }"
     view-transition-name="site-header"
-    class="!fixed bg-transparent z-899 w-screen h-20 px-6 flex justify-between items-center relative"
+    class="!fixed bg-transparent z-899 w-screen h-20 px-2 flex justify-around items-center relative"
   >
     <div class="flex items-center h-full">
       <a href="/" mr-6 aria-label="Header Logo Image">
-        <img width="32" height="32" :src="siteConfig.header.logo.src" :alt="siteConfig.header.logo.alt">
+        <img width="40" height="40" :src="siteConfig.header.logo.src_dark" :alt="siteConfig.header.logo.alt" class="dark:block hidden">
+        <img width="40" height="40" :src="siteConfig.header.logo.src_light" :alt="siteConfig.header.logo.alt" class="dark:hidden block">
       </a>
       <nav class="sm:flex hidden flex-wrap gap-x-6 position-initial flex-row">
         <a
@@ -97,11 +83,6 @@ function toggleNavDrawer() {
       </div>
     </div>
     <div class="flex gap-x-6">
-      <a
-        v-for="link in socialLinks" :key="link.text" :aria-label="`${link.text}`" :class="link.icon" nav-link
-        :target="getLinkTarget(link.href)" :href="link.href"
-      />
-
       <a nav-link target="_blank" href="/rss.xml" i-ri-rss-line aria-label="RSS" />
       <ThemeToggle />
     </div>
