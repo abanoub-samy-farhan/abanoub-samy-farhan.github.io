@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import ListPosts from '@/components/ListPosts.vue'
 import siteConfig from '@/site-config'
 import { getPosts } from '@/utils/posts'
+import ListNotes from '@/components/ListNotes.vue'
 
 export async function getStaticPaths() {
   const paths = siteConfig.page.blogLinks.map((nav) => {
@@ -39,5 +40,5 @@ function activeLink(pathname: string) {
       ))
     }
   </div>
-  <ListPosts list={posts} />
+  {path?.includes('notes') ? <ListNotes list={posts} client:load /> : <ListPosts list={posts} />}
 </BaseLayout>

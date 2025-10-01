@@ -6,6 +6,10 @@ tags:
     - privacy
     - security
     - movies
+image: {
+    src: "/covers/snowden-cover.jpg",
+    alt: "Snowden Movie Poster",
+}
 ---
 
 Comming SOON

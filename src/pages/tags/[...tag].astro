@@ -1,0 +1,78 @@
+---
+// Create file: src/pages/tags/[tag].astro
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import ListPosts from '@/components/ListPosts.vue'
+import ListNotes from '@/components/ListNotes.vue'
+import { getPosts } from '@/utils/posts'
+
+export async function getStaticPaths() {
+  // Get all posts
+  const allPosts = await getPosts('')
+
+  // Collect all unique tags
+  const tagsSet = new Set<string>()
+  allPosts.forEach((post) => {
+    if (post.data.tags && Array.isArray(post.data.tags)) {
+      post.data.tags.forEach((tag: string) => tagsSet.add(tag))
+    }
+  })
+
+  // Create a path for each tag
+  return Array.from(tagsSet).map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }))
+}
+
+const { tag } = Astro.props
+
+// Get all posts and filter by tag
+const allPosts = await getPosts()
+const filteredPosts = allPosts.filter((post) => post.data.tags && post.data.tags.includes(tag))
+
+// Separate notes from other posts
+const notes = filteredPosts.filter((post) => post.slug.includes('notes'))
+const otherPosts = filteredPosts.filter((post) => !post.slug.includes('notes'))
+
+// Get tag count
+const tagCount = filteredPosts.length
+---
+
+<BaseLayout title={`Tag: ${tag}`} description={`All posts tagged with "${tag}"`} pageNav={true} pageOperate={true}>
+  <div class="mb-8">
+    <a href="/blog" class="nav-link text-sm opacity-50 hover:opacity-80 inline-flex items-center gap-2">
+      <i class="i-ri-arrow-left-line"></i>
+      Back to Blog
+    </a>
+  </div>
+
+  <div class="mb-8">
+    <h1 class="text-4xl font-bold mb-2">
+      #{tag}
+    </h1>
+    <p class="opacity-70">
+      {tagCount}
+      {tagCount === 1 ? 'post' : 'posts'} tagged with "{tag}"
+    </p>
+  </div>
+
+  {
+    notes.length > 0 && (
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold mb-6 opacity-90">Notes</h2>
+        <ListNotes list={notes} client:load />
+      </div>
+    )
+  }
+
+  {
+    otherPosts.length > 0 && (
+      <div>
+        <h2 class="text-2xl font-bold mb-6 opacity-90">Posts</h2>
+        <ListPosts list={otherPosts} />
+      </div>
+    )
+  }
+
+  {filteredPosts.length === 0 && <div class="my-12 opacity-50">No posts found with tag "{tag}"</div>}
+</BaseLayout>
