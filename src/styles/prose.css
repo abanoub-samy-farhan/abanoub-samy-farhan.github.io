@@ -2,7 +2,7 @@
   --at-apply: text-base lh-1.75 mb-16 max-w-none sm: min-h-50vh min-h-38vh;
 }
 .prose a {
-  --at-apply: prose-link dark: text-purple-500;
+  --at-apply: 'prose-link dark:text-purple-500';
 }
 
 .prose strong {
