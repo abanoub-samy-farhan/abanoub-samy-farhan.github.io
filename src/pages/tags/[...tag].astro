@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 const { tag } = Astro.props
 
 // Get all posts and filter by tag
-const allPosts = await getPosts()
+const allPosts = await getPosts('')
 const filteredPosts = allPosts.filter((post) => post.data.tags && post.data.tags.includes(tag))
 
 // Separate notes from other posts
