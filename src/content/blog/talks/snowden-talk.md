@@ -1,6 +1,7 @@
 ---
 title: Snowden Movie Talk
 date: 2025-09-30
+duration: 4min
 description: A personal reflection on the movie "Snowden"
 tags:
     - privacy
@@ -19,7 +20,7 @@ time and the ethical dilemmas it presents. In the recent time, I become more awa
 
 Now in 2025, I realized that hacking is not just about stealing data, or making stateless attacks. Now governments and corporations have the power of collecting trillions of real-time data points about individuals, making thousands of alternatives and more advanced `xkeyscore` programs. AI invasion and acceleration is mainly based on the free data recources that these companies are controlling, and all are legalized by the `Terms of use` agreements that we all accept without reading. AI Agents and hackers are simply doing the same but those are getting your permission to do so. I mean not all of them of course, but it's undeniable that these free agents are digesting your personal data in some way.
 
-Articles like [this](https://about.fb.com/news/2023/09/privacy-matters-metas-generative-ai-features/) from Meta are trying to alleviate the concerns of users by providing some control over their data (no one can really check that is 100% true).
+Articles like [this](https://about.fb.com/news/2023/09/privacy-matters-metas-generative-ai-features/) from Meta and other companies are trying to alleviate the concerns of users by providing some control over their data (no one can really check that is 100% true).
 
 <hr class="hr-line" />
 
