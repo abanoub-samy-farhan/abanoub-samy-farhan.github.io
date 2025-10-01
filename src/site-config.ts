@@ -3,7 +3,7 @@ export const siteConfig = {
   title: 'Abanoub Aziz',
   description: 'Personal website and blog of Abanoub Aziz',
   image: {
-    src: '/hero.jpg',
+    src: '/logo.me.png',
     alt: 'Website Main Image',
   },
   email: 'abanoubsamy2341@gmail.com',
