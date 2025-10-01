@@ -4,10 +4,10 @@ import { type CollectionPosts } from '@/types'
 import { getPosts } from '@/utils/posts'
 
 export async function getStaticPaths() {
-  const posts = await getPosts()
+  const posts = await getPosts('')
   return posts.map((post) => {
     return {
-      params: { slug: post.slug },
+      params: { slug: post.slug.split('/')[1] },
       props: {
         post,
       },
@@ -18,7 +18,8 @@ export async function getStaticPaths() {
 type Props = { post: CollectionPosts }
 
 const { post } = Astro.props
-const { title, image, description, date, duration, tag } = post.data
+const path = Astro.params
+const { title, image, description, date, duration, tags } = post.data
 
 const { Content } = await post.render()
 
@@ -33,7 +34,6 @@ function getDate(date: string) {
     <p op-50>
       {date && <time datetime={getDate(date)}>{date.split(',')}</time>}
       {duration && <span>· {duration}</span>}
-      {tag && <span>· {tag}</span>}
     </p>
     {
       image && (
@@ -43,5 +43,19 @@ function getDate(date: string) {
       )
     }
     <Content />
+    {
+      tags && (
+        <div class="flex gap-2 mt-4">
+          {tags.map((tag) => (
+            <a
+              href={`/tags/${tag.toLowerCase()}`}
+              class="text-sm px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >
+              #{tag}
+            </a>
+          ))}
+        </div>
+      )
+    }
   </article>
 </BaseLayout>
