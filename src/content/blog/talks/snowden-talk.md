@@ -1,7 +1,7 @@
 ---
 title: Snowden Movie Talk
 date: 2025-09-30
-duration: 4min
+duration: 4 min
 description: A personal reflection on the movie "Snowden"
 tags:
     - privacy

@@ -6,10 +6,10 @@ tags:
   - web
   - networking
   - protocols
-duration: 10min
+duration: 10 min
 ---
 
-Long before I started learning more about the web and how things work, I imagined that the browser was the software that stored all the information and delivered it to me upon request. While this isn’t entirely wrong, it’s a far too simple explanation for the real process. Today, I’m going to discuss some aspects of this process in a straightforward way.
+Long before I started learning more about the web and how things work, I imagined that the browser was the software that stored all the information and delivered it to me upon request. While this isn't entirely wrong, it’s a far too simple explanation for the real process. Today, I’m going to discuss some aspects of this process in a straightforward way.
 
 ## Guidelines of the process
 

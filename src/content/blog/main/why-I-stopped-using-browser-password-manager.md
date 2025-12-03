@@ -6,7 +6,7 @@ tags:
   - security
   - tools
   - password-manager
-duration: 5min
+duration: 5 min
 ---
 Since a while ago I saw a lot of problems with the browsers' system of saving passwords for you; undeniably, it's a no-brainer action for a lot of people to save their passwords directly on the browsers because it is easy to access and it's taking away much more time and effort of managing and remembering which password is used for what. However, it comes with a lot of problems because passwords on browsers can be easily misused if anyone could access your sessions or physically have access to your laptop.
 
@@ -88,4 +88,4 @@ I've worked a lot to make it convenient and easy to use by providing a very deta
 
 It's a simple, but genuinely great, project I have worked on and I hope you enjoy it (especially Linux nerds and terminal lovers). Thanks and Enjoy! 😉
 
-👉 [Check it out on GitHub](#)
+[Check it out on GitHub](https://github.com/abanoub-samy-farhan/safe-pass)
