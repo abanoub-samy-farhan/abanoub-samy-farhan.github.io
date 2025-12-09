@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<{
 })
 
 const searchQuery = ref('')
-const selectedTag = ref<string | null>(null)
+const selectedTags = ref(new Set<string>())
 const showAllTags = ref(false)
 const INITIAL_TAGS_COUNT = 5
 
@@ -71,13 +71,13 @@ const displayedTags = computed(() => {
   return allTagsByFrequency.value.slice(0, INITIAL_TAGS_COUNT)
 })
 
-// Filter notes by selected tag
 const filteredList = computed(() => {
-  if (!selectedTag.value)
+  if (!selectedTags.value.size)
     return props.list
 
   return props.list.filter(note =>
-    note.data.tags && note.data.tags.includes(selectedTag.value),
+    Array.isArray(note.data.tags)
+    && note.data.tags.some((tag: string) => selectedTags.value.has(tag)),
   )
 })
 
@@ -115,18 +115,18 @@ function clearSearch() {
 }
 
 function toggleTag(tag: string) {
-  if (selectedTag.value === tag) {
-    selectedTag.value = null
+  if (selectedTags.value.has(tag)) {
+    selectedTags.value.delete(tag)
   }
   else {
-    selectedTag.value = tag
+    selectedTags.value.add(tag)
   }
   // Reset search when selecting a tag
   searchQuery.value = ''
 }
 
 function clearFilters() {
-  selectedTag.value = null
+  selectedTags.value.clear()
   searchQuery.value = ''
 }
 
@@ -146,7 +146,7 @@ function toggleShowAllTags() {
           :key="tag"
           text-xs px-3 py-1.5 rounded-full
           transition-colors cursor-pointer border-none
-          :class="selectedTag === tag
+          :class="selectedTags.has(tag)
             ? 'dark:bg-purple-600 bg-purple-400 text-white'
             : 'dark:bg-purple-950 bg-purple-200 hover:dark:bg-purple-900 hover:bg-purple-300'"
           @click="toggleTag(tag)"
@@ -163,7 +163,7 @@ function toggleShowAllTags() {
           {{ showAllTags ? 'Show less' : `Show ${allTagsByFrequency.length - INITIAL_TAGS_COUNT} more` }}
         </button>
         <button
-          v-if="selectedTag"
+          v-if="selectedTags.size > 0"
           text-xs px-3 py-1.5 rounded-full
           dark:bg-transparent bg-red-300 border-solid border-2 dark:border-purple-500 dark:border-opacity-50
           hover:border-opacity-80 transition-colors cursor-pointer
@@ -189,7 +189,7 @@ function toggleShowAllTags() {
             bg-transparent
             focus:outline-none focus:ring-2 focus:ring-purple-500
             focus:ring-opacity-50
-            :disabled="!!selectedTag"
+            :disabled="selectedTags.size > 0"
           >
           <button
             v-if="searchQuery"
@@ -204,8 +204,8 @@ function toggleShowAllTags() {
       <div v-if="searchQuery" mt-2 text-sm opacity-70>
         Showing {{ groupedNotes.length }} of {{ allGroupedNotes.length }} groups
       </div>
-      <div v-if="selectedTag" mt-2 text-sm opacity-70>
-        Filtering by tag: <span font-semibold>{{ selectedTag }}</span>
+      <div v-if="selectedTags.size > 0" mt-2 text-sm opacity-70>
+        Filtering by tags: <span font-semibold>{{ [...selectedTags].join(', ') }}</span>
       </div>
     </div>
 
@@ -213,7 +213,7 @@ function toggleShowAllTags() {
     <div sm:min-h-38 min-h-28 mb-18>
       <template v-if="groupedNotes.length === 0">
         <div my-12 opacity-50>
-          {{ searchQuery ? `No groups found matching "${searchQuery}"` : selectedTag ? `No notes with tag "${selectedTag}"` : 'nothing here yet.' }}
+          {{ searchQuery ? `No groups found matching "${searchQuery}"` : 'nothing here yet.' }}
         </div>
       </template>
 
@@ -259,7 +259,7 @@ function toggleShowAllTags() {
                     :key="tag"
                     text-xs px-2 py-1 mr-1 rounded-full
                     inline-block transition-colors cursor-pointer
-                    :class="selectedTag === tag
+                    :class="selectedTags.has(tag)
                       ? 'dark:bg-purple-600 bg-purple-400 text-white'
                       : 'dark:bg-purple-950 bg-purple-200 hover:dark:bg-purple-900 hover:bg-purple-300'"
                     @click.prevent="toggleTag(tag)"
